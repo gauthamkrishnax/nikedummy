@@ -1,10 +1,16 @@
-function Card () {
+import styles from "./Card.module.scss"
+
+function Card (props) {
     return ( 
-        <div>
+        <div className={styles.container}>
             <span>
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="" />
+                <img src={props.img} alt={props.title} />
             </span>
-            
+            <h5>
+                {props.title}
+            </h5>
+            <p>{props.cat}</p>
+            <span>MRP : ₹ {props.price}</span>
         </div>
      );
 }

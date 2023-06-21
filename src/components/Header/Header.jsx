@@ -10,8 +10,8 @@ import { UilHeart } from '@iconscout/react-unicons'
 import { UilShoppingBag } from '@iconscout/react-unicons'
 
 function Header() {
-    return (  <div class="pageheader">
-    <div class="cmp-adaptiveform-pageheader">
+    return (  <div className="pageheader">
+    <div className="cmp-adaptiveform-pageheader">
         <div className={styles.first_nav}>
             <div><UilAnchor size="30" color="#111111" /></div>
             <div>
