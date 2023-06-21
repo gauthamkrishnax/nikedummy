@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.first_nav {
+    padding: 5px 2em;
+    display: flex;
+    background-color: $bg;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            font-size: 0.8em;
+            margin-right: 1em;
+            a {
+                color: $primary;
+            }
+        }
+        li:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.second_nav{
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        list-style: none;
+        li {
+            font-size: 1.2em;
+            margin-right: 1em;
+            a {
+                color: $primary;
+            }
+        }
+        li:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}

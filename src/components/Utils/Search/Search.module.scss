@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+
+.container {
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    border-radius: 3em;
+    margin: 0 1em;
+    span {
+        display: block;
+        overflow: hidden;
+        padding-right: 20px;
+    }
+
+    input[type=text] {
+        width: 100%;
+        background-color: $bg;
+        float: right;
+        padding: 6px;
+        border: none;
+        font-size: 1em;
+        padding-left: 0.5em;
+        border: none;
+        outline: none;
+      }
+
+}
