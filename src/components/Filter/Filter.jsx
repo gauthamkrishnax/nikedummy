@@ -2,58 +2,58 @@ import styles from "./Filter.module.scss"
 
 import Accordion from "../Utils/Accordion/Accordion"
 
-function Filter({fetchBasedOnCategory}) {
+function Filter({ fetchBasedOnCategory }) {
 
 
-    return ( <div className={styles.container}>
+   return (<div className={styles.container}>
+      <ul>
+         <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
+         <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
+         <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
+         <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
+      </ul>
+      <Accordion title="Shop by Price">
          <ul>
             <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
             <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
             <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
             <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
-           </ul>
-        <Accordion title="Category">
+         </ul>
+      </Accordion>
+      <Accordion title="Rating">
          <ul>
             <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
             <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
             <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
             <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
-           </ul>
-        </Accordion>
-        <Accordion title="Category">
+         </ul>
+      </Accordion>
+      <Accordion title="Category">
          <ul>
             <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
             <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
             <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
             <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
-           </ul>
-        </Accordion>
-        <Accordion title="Category">
+         </ul>
+      </Accordion>
+      <Accordion title="Category">
          <ul>
             <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
             <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
             <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
             <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
-           </ul>
-        </Accordion>
-        <Accordion title="Category">
+         </ul>
+      </Accordion>
+      <Accordion title="Category">
          <ul>
             <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
             <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
             <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
             <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
-           </ul>
-        </Accordion>
-        <Accordion title="Category">
-         <ul>
-            <li><button category="electronics" onClick={fetchBasedOnCategory}>Electronics</button></li>
-            <li><button category="jewelery" onClick={fetchBasedOnCategory}>Jewelery</button></li>
-            <li><button category="men's clothing" onClick={fetchBasedOnCategory}>Men's clothing</button></li>
-            <li><button category="women's clothing" onClick={fetchBasedOnCategory}>Women's clothing</button></li>
-           </ul>
-        </Accordion>
+         </ul>
+      </Accordion>
 
-    </div> );
+   </div>);
 }
 
 export default Filter;
