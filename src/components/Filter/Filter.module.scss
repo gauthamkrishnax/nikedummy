@@ -16,3 +16,17 @@
         }
     }
 }
+
+.price_checkbox {
+    div {
+        margin-bottom: .8em;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input {
+        margin-right: 1em;
+    }
+}
