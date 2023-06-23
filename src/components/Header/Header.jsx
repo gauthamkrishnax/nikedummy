@@ -22,7 +22,7 @@ function Header() {
             </div>
 
             <div className={styles.second_nav}>
-                <div><UilBolt size="50" /></div>
+                <div><UilBolt size="50" /><h2>Demo Site</h2></div>
                 <div className={styles.nav}>
                     <div>
                         <ul>
