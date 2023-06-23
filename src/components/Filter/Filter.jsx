@@ -4,12 +4,12 @@ import Accordion from "../Utils/Accordion/Accordion"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Filter({ fetchBasedOnCategory, fetchBasedOnPrice }) {
+function Filter({ fetchBasedOnPrice }) {
 
    const [checked, setChecked] = useState([]);
 
    const handleCheck = (event) => {
-      var updatedList = [...checked];
+      let updatedList = [...checked];
       if (event.target.checked) {
          updatedList = [...checked, event.target.value];
       } else {
