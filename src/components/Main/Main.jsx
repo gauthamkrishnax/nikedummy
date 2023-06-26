@@ -92,6 +92,8 @@ function Main() {
         }
     }
 
+
+
     useEffect(() => {
 
         if (!category || category === "all") {
@@ -109,7 +111,7 @@ function Main() {
             fetchBasedOnCategory("all")
         }
 
-
+        //  eslint-disable-next-line
     }, [category, price]);
 
     const storeItems = data.map(item =>
