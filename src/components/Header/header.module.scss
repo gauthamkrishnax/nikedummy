@@ -32,10 +32,15 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 1200px) {
+        display: block;
+    }
+
     ul {
         display: flex;
         list-style: none;
         margin-right: 2em;
+        margin-bottom: 1em;
 
         li {
             font-size: 1.2em;
@@ -43,6 +48,10 @@
 
             a {
                 color: $primary;
+            }
+
+            @media screen and (max-width: 720px) {
+                font-size: 1em;
             }
         }
 
@@ -55,4 +64,29 @@
 .nav {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 1200px) {
+        display: block;
+        margin-top: 2em;
+    }
+}
+
+.nav_icons {
+    display: flex;
+    margin-left: 1em;
+
+    @media screen and (max-width: 1200px) {
+        margin-top: 1em;
+    }
+}
+
+.nav_links {
+    ul {
+        @media screen and (max-width: 1200px) {
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 0;
+        }
+    }
+
 }

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 import Card from "../Utils/Card/Card";
 import Filter from "../Filter/Filter";
-
 import styles from "./Main.module.scss"
 
 let productURL = "https://fakestoreapi.com/products"
@@ -54,18 +53,13 @@ const reducer = (state, action) => {
 
 
 function Main() {
-    let { category } = useParams();
+    let { category, price } = useParams();
 
     const [state, dispatch] = useReducer(reducer, initialState);
     const { data, loading, error } = state;
 
     function fetchBasedOnCategory(e) {
         dispatch({ type: "LOADING" })
-        if (e === "all") {
-            productURL = "https://fakestoreapi.com/products"
-        } else {
-            productURL = `https://fakestoreapi.com/products/category/${e}`
-        }
         getResponse(productURL).then(data => {
             dispatch({ type: "SUCCESS", data: data })
         }).catch(error => dispatch({ type: "ERROR", error: error }))
@@ -99,11 +93,24 @@ function Main() {
     }
 
     useEffect(() => {
-        if (category) {
+
+        if (!category || category === "all") {
+            productURL = "https://fakestoreapi.com/products"
+        } else {
+            productURL = `https://fakestoreapi.com/products/category/${category}`
+        }
+
+        if (price) {
+            fetchBasedOnPrice(price.split(","))
+        }
+        else if (category) {
             fetchBasedOnCategory(category)
-        } else
+        } else {
             fetchBasedOnCategory("all")
-    }, [category]);
+        }
+
+
+    }, [category, price]);
 
     const storeItems = data.map(item =>
         <Card key={item.id} title={item.title} img={item.image} cat={item.category} price={item.price} />)

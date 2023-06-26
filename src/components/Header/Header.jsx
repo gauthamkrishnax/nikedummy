@@ -24,7 +24,7 @@ function Header() {
             <div className={styles.second_nav}>
                 <div><UilBolt size="50" /><h2>Demo Site</h2></div>
                 <div className={styles.nav}>
-                    <div>
+                    <div className={styles.nav_links}>
                         <ul>
                             <li><Link text="New & Featured" /></li>
                             <li><Link text="Men" /></li>
@@ -34,8 +34,10 @@ function Header() {
                         </ul>
                     </div>
                     <Search />
-                    <UilHeart size="30" />
-                    <UilShoppingBag size="30" />
+                    <div className={styles.nav_icons}>
+                        <UilHeart size="30" />
+                        <UilShoppingBag size="30" />
+                    </div>
                 </div>
             </div>
         </div>

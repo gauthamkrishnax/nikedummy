@@ -7,6 +7,15 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 0px 0px;
+
+    @media screen and (max-width: 720px) {
+        // display: grid;
+        // grid-auto-columns: 1fr;
+        // grid-template-rows: 1fr 3fr;
+        // gap: 0px 0px;
+        display: block;
+        // display: flex;
+    }
 }
 
 .store_item_container {
@@ -14,6 +23,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em 1em;
     position: relative;
+
+    @media screen and (max-width: 720px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .loading_modal {
